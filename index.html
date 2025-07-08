@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supriya - Portfolio</title>
+    <script src="https://kit.fontawesome.com/a9cdbedf57.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    <link rel="stylesheet" id="themeStylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div><a href="./index.html"><span class="logo">Supriya</span></a></div>
+        <div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#spatial-tools">Spatial Tools</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="hero-section" id="home">
+            <div>
+                <div>
+                    <h4 title="Hello, How are you?">Hi, There!</h4>
+                    <h2 class="hero-section__title">I'm Supriya</h2>
+                    <p class="hero-section__desc">I'm a Geomatics Engineering student with a strong passion for GIS, remote sensing, and spatial technologies. I enjoy working on real-world problems and finding smart, geospatial ways to solve them. Learning new tools and turning data into insights is something that really excites me.</p>
+                </div>
+                 <a href="#contact" class="btn btn-primary">Contact Me</a>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/supriya.silwal.68496" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/supriya-silwal-32492b2b6/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/sup._.riya003/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="hero-img"><img src="assets/img/Supriya.jpg" alt="Supriya-portfolio" width="350"></div>
+        </section>
+        <section class="about-section" id="about">
+            <div class="about-img"><img src="assets/img/Supriya.jpg" alt="Supriya-portfolio"></div>
+            <div class="about-content">
+                <h4>About Me</h4>
+                <h2>I am a GIS Expert & <br> Web Developer</h2>
+                <p>I'm always excited to explore new ideas and geospatial challenges. If you're working on something interesting or just want to connect over maps, data, or tech—I'd love to hear from you!</p>
+            </div>
+        </section>
+        <section class="my-skills-section" id="skills">
+            <h2>My Skills</h2>
+            <div class="skills-container">
+                <div class="technical-skills">
+                    <div class="skills-grid">
+                        <div class="skill-card"><img src="assets/img/gis-logos.png" alt="ArcGIS and QGIS Logos"><h4>ArcGIS / QGIS</h4></div>
+                        <div class="skill-card"><img src="assets/img/photogrammetry.png" alt="Photogrammetry Drone Icon"><h4>Photogrammetry</h4></div>
+                        <div class="skill-card"><img src="assets/img/remote-sensing.png" alt="Remote Sensing Satellite Icon"><h4>Remote Sensing</h4></div>
+                        <div class="skill-card"><img src="assets/img/cartography.png" alt="Cartography Globe Icon"><h4>Cartography</h4></div>
+                        <div class="skill-card"><img src="assets/img/programming.jpg" alt="Programming Language Logos"><h4>Programming</h4></div>
+                    </div>
+                </div>
+                <div class="soft-skills">
+                    <h3>Soft Skills</h3>
+                    <div class="soft-skills-list">
+                        <div class="soft-skill-item">
+                            <span class="skill-title purple">Group Project</span>
+                            <span class="skill-desc">Collaboration</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <span class="skill-title teal">Presentation</span>
+                            <span class="skill-desc">Skills</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <span class="skill-title gold">Adaptability</span>
+                            <span class="skill-desc">in Field Conditions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="projects-section" id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-cards">
+                <div class="projects-card-box"><div class="projects-card-box__desc"><h4>Geographic Information System</h4><p>A GIS-based evacuation route planning in a flood-susceptible area of Helambu Rural Municipality.</p></div></div>
+                <div class="projects-card-box"><div class="projects-card-box__desc"><h4>Database Management</h4><p>Determining the shortest route using pgRouting, PostGIS, PostgreSQL, and QGIS.</p></div></div>
+                <div class="projects-card-box"><div class="projects-card-box__desc"><h4>Photogrammetry</h4><p>Preparation of a topographical map using an Unmanned Aerial Vehicle (UAV).</p></div></div>
+            </div>
+        </section>
+        <section class="spatial-tools-map-section" id="spatial-tools">
+            <h2>Spatial Tools</h2>
+            <div id="map"></div>
+            <div class="map-buttons">
+                <button id="bufferBtn" class="btn btn-primary">Create Buffer (1km)</button>
+                <button id="measureBtn" class="btn btn-primary">Measure Distance</button>
+                <button id="areaBtn" class="btn btn-primary">Draw Polygon for Area</button>
+            </div>
+        </section>
+       <section class="contact-section" id="contact">
+            <h2>Contact Me</h2>
+            <p class="contact-intro">I'm open to discussing new projects and opportunities. Feel free to reach out through the form below or connect with me on other platforms.</p>
+            <div class="contact-links">
+                <a href="mailto:supriyasilwal33@gmail.com" class="contact-link-item"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://www.linkedin.com/in/supriya-silwal-32492b2b6/" target="_blank" class="contact-link-item"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/Supriya-Silwal" target="_blank" class="contact-link-item"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+            <form action="https://formspree.io/f/xnndjevd" method="POST" class="contact__form" id="contactForm">
+                <div><label for="name"></label><input type="text" id="name" name="name" placeholder="Full Name" class="contact__input" required></div>
+                <div><label for="email"></label><input type="email" id="email" name="email" placeholder="Email" class="contact__input" required></div>
+                <div><label for="message"></label><textarea id="message" name="message" placeholder="Type Message" rows="5" class="contact__input" required></textarea></div>
+                <div><button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button></div>
+                <p id="formMessage" class="form-message" style="display:none; color: green; margin-top: 10px;">✅ Thank you! Your message has been sent.</p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2025 - <a href="https://github.com/Supriya-Silwal" target="_blank">Supriya Silwal</a> - All Rights Reserved.</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
